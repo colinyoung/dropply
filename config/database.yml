@@ -1,0 +1,19 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: dropply_dev
+  pool: 5
+  username: dropply
+  password: "dropp&&li"
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: dropply_prod
+  pool: 5
+  username: dropply
+  password: "dropp&&li"
+  host: localhost
