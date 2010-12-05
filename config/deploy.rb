@@ -3,7 +3,7 @@ require 'bundler/capistrano'
 set :user, "www-data"
 set :application, "dropply"
 set :repository,  "git@github.com:colinyoung/dropply.git"
-set :deploy_to, "/var/www/public_html/dropp.ly"co
+set :deploy_to, "/var/www/public_html/dropp.ly"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
