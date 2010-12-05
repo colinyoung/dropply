@@ -14,6 +14,7 @@ role :db,  "dropp.ly", :primary => true # This is where Rails migrations will ru
 role :db,  "dropp.ly"
 
 after :deploy, "deploy:copy_database_yml"
+after :deploy, "deploy:migrate"
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
