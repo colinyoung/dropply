@@ -1,0 +1,49 @@
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("jquery", "1.3");
+</script>
+
+<!-- Thirdparty intialization scripts, needed for the Google Gears and BrowserPlus runtimes -->
+<script type="text/javascript" src="/plupload/js/gears_init.js"></script>
+<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+
+<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
+<script type="text/javascript" src="/plupload/js/plupload.full.min.js"></script>
+
+<script type="text/javascript">
+// Convert divs to queue widgets when the DOM is ready
+$(function() {
+  uploader = new plupload.Uploader({
+		runtimes : 'gears,html5,flash,silverlight,browserplus',
+		browse_button : 'pickfiles',
+		container : 'dropzone_container',
+		drop_element: 'dropzone',
+		max_file_size : '10mb',
+		url : '/upload/',
+		flash_swf_url : '/plupload/js/plupload.flash.swf',
+		silverlight_xap_url : '/plupload/js/plupload.silverlight.xap'
+		//resize : {width : 320, height : 240, quality : 90}
+  });
+	
+	uploader.bind('FilesAdded', function(up, files) {
+	    $("#label").text(files[0].name);
+  		setTimeout("uploader.start()", 50);
+  });
+
+  uploader.bind('UploadFile', function(up, file) {
+    $("#label").text("starting upload...")
+  });
+
+  uploader.bind('UploadProgress', function(up, file) {
+    $("#label").text("starting upload..." + file.percent + "%");
+  });
+
+  uploader.bind('FileUploaded', function(up, file) {
+    alert('hi')
+  });
+  
+  uploader.init();  
+
+});
+</script>
+

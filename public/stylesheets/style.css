@@ -31,6 +31,12 @@ body, html {
   left: 0;
 }
 #dropzone {
-  padding: 10px;
   color: #666;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  background: #e8e8e8;
+  padding: 100px 0 0 100px;
 }

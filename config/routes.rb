@@ -2,6 +2,9 @@ Dropply::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   get "welcome/index"
+  
+  post "upload", :controller => "upload", :action => "upload"
+  get "upload", :controller => "upload", :action => "upload"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
