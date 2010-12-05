@@ -1,0 +1,36 @@
+body, html {
+  background-color: #e8e8e8;
+  font-family: Helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#header, #footer {
+  background: #fff;
+}
+#header {
+  margin: 0;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #ccc;  
+  font-size: 10pt;
+  padding: 10px;
+}
+#header p {
+  margin: 0;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  font-size: 8pt;
+}
+#flash {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#dropzone {
+  padding: 10px;
+  color: #666;
+}
