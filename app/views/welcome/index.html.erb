@@ -2,7 +2,7 @@
   <% if user_signed_in? %>
     You're signed in
   <% else %>
-    <%= link_to "Sign in with Facebook", user_omniauth_auth_path(:facebook) %>
+    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
   <% end %>
 </div>
 
